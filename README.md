@@ -22,7 +22,8 @@ _This is a console app where user inputs a word, and a list of possible anagrams
 
 ### Behavior Driven Development Spec List
 1. Create an instance of Anagram
-2. 
+2. Create a string property of Anagram: Word
+3. Convert word to char array
 
 ---
 ## Known Bugs
