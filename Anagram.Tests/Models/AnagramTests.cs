@@ -17,7 +17,7 @@ namespace Anagram.Tests{
     }
 
     [TestMethod]
-    public void GetWord_ReturnWord_string(){
+    public void GetWord_ReturnWord_String(){
       string words = "beard";
       string word = "beard";
       AnagramString anagram = new AnagramString(words,word);
@@ -25,20 +25,24 @@ namespace Anagram.Tests{
       string result = anagram.Word;
       List<string> listResult = new List<string>{};
       listResult = AnagramString.GetAll();
-      
+
       Assert.AreEqual(word, result);
       Assert.AreEqual(words, listResult[0]);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsEmptyList_AnagramList()
-    // {
-    //   AnagramString newList = new AnagramString();
+    [TestMethod]
+    public void Compare_ReturnListOfAnagrams_List()
+    {
+      string listItem = "bad";
+      string word = "dab";
+      AnagramString anagram = new AnagramString(listItem,word);
 
-    //   List<AnagramString> result = newList.GetAll();
+      List<string> listResult = new List<string>{};
+      listResult = AnagramString.GetAll();
+      listResult = AnagramString.Compare(listResult, word);
 
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      Assert.AreEqual(listItem, listResult[0]);
+    }
   }
   
 }
